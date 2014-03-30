@@ -10,4 +10,7 @@ public class Main{
         System.out.println("please work");
         //hi
     }
+    public static int testing(){
+        return 5;
+    }
 }
