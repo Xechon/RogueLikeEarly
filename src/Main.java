@@ -44,6 +44,7 @@ public class Main extends JFrame{
                             main.getRoomContainer().act();
                         }
                     });
+                    t.start();
                 }
             });
         } catch (InterruptedException e) {

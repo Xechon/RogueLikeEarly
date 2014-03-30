@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a196dcf-059a-4c18-a0e2-fa956bb3141f" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RogueLikeEarly.iws" />
@@ -83,18 +84,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="45" column="22" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.7717908" vertical-offset="278" max-vertical-offset="1037">
+            <state line="46" column="30" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.0" vertical-offset="278" max-vertical-offset="1054">
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#889#890#0" expanded="true" />
                 <element signature="e#925#926#0" expanded="true" />
-                <element signature="e#1026#1507#0" expanded="true" />
+                <element signature="e#1026#1538#0" expanded="true" />
                 <element signature="e#1241#1473#0" expanded="true" />
                 <element signature="e#1450#1451#0" expanded="true" />
-                <element signature="e#1492#1493#0" expanded="true" />
+                <element signature="e#1523#1524#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -145,10 +146,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Actor.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="Actor.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Actor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="28" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0" vertical-offset="10" max-vertical-offset="442">
+            <state line="13" column="5" selection-start="204" selection-end="204" vertical-scroll-proportion="0.35023773" vertical-offset="0" max-vertical-offset="631">
               <folding />
             </state>
           </provider>
@@ -505,7 +506,11 @@
       <created>1396215248450</created>
       <updated>1396215248450</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="It's working, but nothing happens">
+      <created>1396215447680</created>
+      <updated>1396215447680</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -553,7 +558,8 @@
     <MESSAGE value="Initial commit&#10;" />
     <MESSAGE value="Not working, but pushing just incase computer explodes" />
     <MESSAGE value="Not working, but pushing just incase computer explodes&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Not working, but pushing just incase computer explodes&#10;" />
+    <MESSAGE value="It's working, but nothing happens" />
+    <option name="LAST_COMMIT_MESSAGE" value="It's working, but nothing happens" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -570,10 +576,10 @@
             <element signature="imports" expanded="true" />
             <element signature="e#889#890#0" expanded="true" />
             <element signature="e#925#926#0" expanded="true" />
-            <element signature="e#1026#1507#0" expanded="true" />
+            <element signature="e#1026#1538#0" expanded="true" />
             <element signature="e#1241#1473#0" expanded="true" />
             <element signature="e#1450#1451#0" expanded="true" />
-            <element signature="e#1492#1493#0" expanded="true" />
+            <element signature="e#1523#1524#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -637,10 +643,10 @@
             <element signature="imports" expanded="true" />
             <element signature="e#889#890#0" expanded="true" />
             <element signature="e#925#926#0" expanded="true" />
-            <element signature="e#1026#1507#0" expanded="true" />
+            <element signature="e#1026#1538#0" expanded="true" />
             <element signature="e#1241#1473#0" expanded="true" />
             <element signature="e#1450#1451#0" expanded="true" />
-            <element signature="e#1492#1493#0" expanded="true" />
+            <element signature="e#1523#1524#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -652,10 +658,10 @@
             <element signature="imports" expanded="true" />
             <element signature="e#889#890#0" expanded="true" />
             <element signature="e#925#926#0" expanded="true" />
-            <element signature="e#1026#1507#0" expanded="true" />
+            <element signature="e#1026#1538#0" expanded="true" />
             <element signature="e#1241#1473#0" expanded="true" />
             <element signature="e#1450#1451#0" expanded="true" />
-            <element signature="e#1492#1493#0" expanded="true" />
+            <element signature="e#1523#1524#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -702,13 +708,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Actor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="28" selection-start="235" selection-end="235" vertical-scroll-proportion="0.0" vertical-offset="10" max-vertical-offset="442">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Room.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="15" column="48" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
@@ -721,16 +720,23 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="45" column="22" selection-start="1474" selection-end="1474" vertical-scroll-proportion="0.7717908" vertical-offset="278" max-vertical-offset="1037">
+        <state line="46" column="30" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.0" vertical-offset="278" max-vertical-offset="1054">
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#889#890#0" expanded="true" />
             <element signature="e#925#926#0" expanded="true" />
-            <element signature="e#1026#1507#0" expanded="true" />
+            <element signature="e#1026#1538#0" expanded="true" />
             <element signature="e#1241#1473#0" expanded="true" />
             <element signature="e#1450#1451#0" expanded="true" />
-            <element signature="e#1492#1493#0" expanded="true" />
+            <element signature="e#1523#1524#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Actor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="13" column="5" selection-start="204" selection-end="204" vertical-scroll-proportion="0.35023773" vertical-offset="0" max-vertical-offset="631">
+          <folding />
         </state>
       </provider>
     </entry>
