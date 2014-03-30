@@ -9,14 +9,21 @@ import java.lang.reflect.InvocationTargetException;
  * Time: 1:22 PM
  */
 public class Main extends JFrame{
+    private static final int DESIRED_WIDTH = 1920;
+    private static final int DESIRED_HEIGHT = 1080;
+
     public Main(){
         super("Test");
-        setSize(new Dimension(500,500));
+        setSize(new Dimension(DESIRED_WIDTH,DESIRED_HEIGHT));
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
-        setLocationByPlatform(true);
+        setLocation(0,0);
+        setUndecorated(true);
+        setLayout(new BorderLayout());
 
+        RoomContainer roomContainer = new RoomContainer(new StartingRoom());
 
+        add(roomContainer,BorderLayout.CENTER);
     }
     public static void main(String[] args){
         try {
@@ -33,5 +40,4 @@ public class Main extends JFrame{
             e.printStackTrace();
         }
     }
-    //push
 }

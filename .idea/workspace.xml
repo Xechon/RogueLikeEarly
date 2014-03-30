@@ -2,8 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a196dcf-059a-4c18-a0e2-fa956bb3141f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Actor.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/StartingRoom.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Room.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/RoomContainer.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" afterPath="$PROJECT_DIR$/.idea/copyright/profiles_settings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
     </list>
     <ignored path="RogueLikeEarly.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -70,12 +76,73 @@
       <file leaf-file-name="Main.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="42" selection-start="694" selection-end="694" vertical-scroll-proportion="0.951049" vertical-offset="34" max-vertical-offset="714">
+            <state line="21" column="28" selection-start="594" selection-end="594" vertical-scroll-proportion="0.34815952" vertical-offset="130" max-vertical-offset="782">
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#529#726#0" expanded="true" />
-                <element signature="e#711#712#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="JFrame.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/javax/swing/JFrame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="561" column="0" selection-start="20374" selection-end="20374" vertical-scroll-proportion="0.0" vertical-offset="9537" max-vertical-offset="16082">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SwingUtilities.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/javax/swing/SwingUtilities.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1348" column="0" selection-start="54028" selection-end="54028" vertical-scroll-proportion="0.0" vertical-offset="22916" max-vertical-offset="35615">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Container.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/java/awt/Container.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1079" column="0" selection-start="42704" selection-end="42704" vertical-scroll-proportion="0.0" vertical-offset="18343" max-vertical-offset="83470">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="StartingRoom.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/StartingRoom.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="8" column="16" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="289">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="RoomContainer.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/RoomContainer.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="9" column="39" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="680">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Actor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Actor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="0" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="391">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Room.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Room.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="13" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="323">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -88,11 +155,17 @@
     </FindUsagesManager>
   </component>
   <component name="Git.Settings">
+    <option name="UPDATE_TYPE" value="MERGE" />
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
+        <option value="$PROJECT_DIR$/src/Actors.java" />
+        <option value="$PROJECT_DIR$/src/Room.java" />
+        <option value="$PROJECT_DIR$/src/RoomContainer.java" />
+        <option value="$PROJECT_DIR$/src/Actor.java" />
+        <option value="$PROJECT_DIR$/src/StartingRoom.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
       </list>
     </option>
@@ -129,8 +202,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -165,6 +236,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -176,6 +249,12 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="recentsLimit" value="5" />
     <property name="dynamic.classpath" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CreateClassDialog.RecentsKey">
+      <recent name="" />
+    </key>
   </component>
   <component name="RunManager" selected="Application.Main">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -228,6 +307,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -253,19 +345,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -375,7 +454,11 @@
       <created>1396206036894</created>
       <updated>1396206036894</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Initial commit&#10;">
+      <created>1396206136648</created>
+      <updated>1396206136648</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -392,19 +475,19 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32743362" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32890856" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32743362" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -433,11 +516,67 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="28" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="833">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/javax/swing/JFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="561" column="0" selection-start="20374" selection-end="20374" vertical-scroll-proportion="0.0" vertical-offset="9537" max-vertical-offset="16082">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/javax/swing/SwingUtilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1348" column="0" selection-start="54028" selection-end="54028" vertical-scroll-proportion="0.0" vertical-offset="22916" max-vertical-offset="35615">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/java/awt/Container.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1079" column="0" selection-start="42704" selection-end="42704" vertical-scroll-proportion="0.0" vertical-offset="18343" max-vertical-offset="83470">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StartingRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="16" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="289">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RoomContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="39" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Actor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="391">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="14" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="391">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#529#726#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -447,19 +586,64 @@
         <state line="6" column="18" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="255">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#529#726#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="12" column="13" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="323">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/RoomContainer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="9" column="39" selection-start="170" selection-end="170" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="680">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/StartingRoom.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="16" selection-start="173" selection-end="173" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/javax/swing/SwingUtilities.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1348" column="0" selection-start="54028" selection-end="54028" vertical-scroll-proportion="0.0" vertical-offset="22025" max-vertical-offset="34867">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/javax/swing/JFrame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="561" column="0" selection-start="20374" selection-end="20374" vertical-scroll-proportion="0.0" vertical-offset="8753" max-vertical-offset="15402">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/java/awt/Container.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1079" column="0" selection-start="42704" selection-end="42704" vertical-scroll-proportion="0.0" vertical-offset="17083" max-vertical-offset="82008">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Actor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="0" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="391">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="42" selection-start="694" selection-end="694" vertical-scroll-proportion="0.951049" vertical-offset="34" max-vertical-offset="714">
+        <state line="21" column="28" selection-start="594" selection-end="594" vertical-scroll-proportion="0.34815952" vertical-offset="130" max-vertical-offset="782">
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#529#726#0" expanded="true" />
-            <element signature="e#711#712#0" expanded="true" />
           </folding>
         </state>
       </provider>
