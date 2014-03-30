@@ -18,7 +18,7 @@ public class Main extends JFrame{
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         setResizable(false);
         setLocation(0,0);
-        setUndecorated(true);
+        //setUndecorated(true);
         setLayout(new BorderLayout());
 
         RoomContainer roomContainer = new RoomContainer(new StartingRoom());

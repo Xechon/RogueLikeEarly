@@ -7,6 +7,9 @@ import java.awt.*;
  * Time: 4:01 PM
  */
 public abstract class Actor {
+    public Actor(){
+
+    }
     public void draw(Graphics2D g2) {
 
     }
