@@ -42,6 +42,7 @@ public class Main extends JFrame{
                         @Override
                         public void actionPerformed(ActionEvent e) {
                             main.getRoomContainer().act();
+                            main.getRoomContainer().repaint();
                         }
                     });
                     t.start();
