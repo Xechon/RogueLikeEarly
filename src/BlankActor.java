@@ -5,7 +5,7 @@
  * Time: 4:25 PM
  */
 public class BlankActor extends Actor{
-    public BlankActor(){
-        super();
+    public BlankActor(int i, int j){
+        super(i,j);
     }
 }

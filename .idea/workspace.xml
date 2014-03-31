@@ -2,7 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a196dcf-059a-4c18-a0e2-fa956bb3141f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sprites/test.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/TestActor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Actor.java" afterPath="$PROJECT_DIR$/src/Actor.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/BlankActor.java" afterPath="$PROJECT_DIR$/src/BlankActor.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Main.java" afterPath="$PROJECT_DIR$/src/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Room.java" afterPath="$PROJECT_DIR$/src/Room.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/StartingRoom.java" afterPath="$PROJECT_DIR$/src/StartingRoom.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RogueLikeEarly.iws" />
@@ -58,7 +64,7 @@
       </breakpoint>
     </breakpoint_any>
     <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
-    <line_breakpoints>
+    <line_breakpoints default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint url="file://$PROJECT_DIR$/src/Main.java" line="18" class="Main" package="">
         <option name="ENABLED" value="true" />
         <option name="LOG_ENABLED" value="false" />
@@ -87,51 +93,30 @@
       <file leaf-file-name="Main.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="46" column="30" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.0" vertical-offset="278" max-vertical-offset="1054">
+            <state line="35" column="0" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="969">
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#889#890#0" expanded="true" />
-                <element signature="e#925#926#0" expanded="true" />
-                <element signature="e#1026#1538#0" expanded="true" />
-                <element signature="e#1241#1473#0" expanded="true" />
-                <element signature="e#1450#1451#0" expanded="true" />
-                <element signature="e#1523#1524#0" expanded="true" />
+                <element signature="e#1024#1599#0" expanded="true" />
+                <element signature="e#1239#1534#0" expanded="true" />
+                <element signature="e#1511#1512#0" expanded="true" />
+                <element signature="e#1584#1585#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="JFrame.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/javax/swing/JFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="561" column="0" selection-start="20374" selection-end="20374" vertical-scroll-proportion="0.0" vertical-offset="9537" max-vertical-offset="16082">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="SwingUtilities.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/javax/swing/SwingUtilities.java">
+        <entry file="jar://C:/Program Files (x86)/Java/jdk1.7.0_51/src.zip!/javax/swing/SwingUtilities.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1348" column="0" selection-start="54028" selection-end="54028" vertical-scroll-proportion="0.0" vertical-offset="22916" max-vertical-offset="35615">
+            <state line="1346" column="0" selection-start="54011" selection-end="54011" vertical-scroll-proportion="0.0" vertical-offset="21955" max-vertical-offset="34884">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Container.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/java/awt/Container.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="1079" column="0" selection-start="42704" selection-end="42704" vertical-scroll-proportion="0.0" vertical-offset="18343" max-vertical-offset="83470">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StartingRoom.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="StartingRoom.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/StartingRoom.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+            <state line="10" column="8" selection-start="183" selection-end="183" vertical-scroll-proportion="0.26604068" vertical-offset="0" max-vertical-offset="639">
               <folding />
             </state>
           </provider>
@@ -140,16 +125,34 @@
       <file leaf-file-name="RoomContainer.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/RoomContainer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="0" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="663">
+            <state line="29" column="0" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="663">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Actor.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Actor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Actor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="13" column="5" selection-start="204" selection-end="204" vertical-scroll-proportion="0.35023773" vertical-offset="0" max-vertical-offset="631">
+            <state line="27" column="26" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="867">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="test.png" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sprites/test.png">
+          <provider selected="true" editor-type-id="images">
+            <state />
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="TestActor.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/TestActor.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="10" column="0" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
               <folding />
             </state>
           </provider>
@@ -158,7 +161,7 @@
       <file leaf-file-name="BlankActor.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/BlankActor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="16" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+            <state line="6" column="13" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
               <folding />
             </state>
           </provider>
@@ -167,11 +170,8 @@
       <file leaf-file-name="Room.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Room.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="48" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-              <folding>
-                <element signature="e#492#493#0" expanded="true" />
-                <element signature="e#521#522#0" expanded="true" />
-              </folding>
+            <state line="11" column="18" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -192,19 +192,20 @@
       <list>
         <option value="$PROJECT_DIR$/src/Actors.java" />
         <option value="$PROJECT_DIR$/src/RoomContainer.java" />
-        <option value="$PROJECT_DIR$/src/StartingRoom.java" />
-        <option value="$PROJECT_DIR$/src/BlankActor.java" />
-        <option value="$PROJECT_DIR$/src/Actor.java" />
-        <option value="$PROJECT_DIR$/src/Room.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
+        <option value="$PROJECT_DIR$/src/BlankActor.java" />
+        <option value="$PROJECT_DIR$/src/Room.java" />
+        <option value="$PROJECT_DIR$/src/Actor.java" />
+        <option value="$PROJECT_DIR$/src/TestActor.java" />
+        <option value="$PROJECT_DIR$/src/StartingRoom.java" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="-8" />
     <option name="y" value="-8" />
-    <option name="width" value="1382" />
-    <option name="height" value="784" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <OptionsSetting value="true" id="Add" />
@@ -261,6 +262,20 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RogueLikeEarly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="RogueLikeEarly" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Sprites" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -343,19 +358,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -381,6 +383,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -510,11 +525,15 @@
       <created>1396215447680</created>
       <updated>1396215447680</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Testing to make sure I can stull upload/changed main so that it redraws all the actors">
+      <created>1396300273436</created>
+      <updated>1396300273436</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="784" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -533,8 +552,8 @@
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32890856" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.24947916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32828283" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -543,7 +562,7 @@
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
-    <option name="RECENTLY_FILTERED_USERS">
+    <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
     </option>
   </component>
@@ -559,7 +578,8 @@
     <MESSAGE value="Not working, but pushing just incase computer explodes" />
     <MESSAGE value="Not working, but pushing just incase computer explodes&#10;" />
     <MESSAGE value="It's working, but nothing happens" />
-    <option name="LAST_COMMIT_MESSAGE" value="It's working, but nothing happens" />
+    <MESSAGE value="Testing to make sure I can stull upload/changed main so that it redraws all the actors" />
+    <option name="LAST_COMMIT_MESSAGE" value="Testing to make sure I can stull upload/changed main so that it redraws all the actors" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
@@ -571,37 +591,62 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="28" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="833">
+        <state line="46" column="30" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.0" vertical-offset="278" max-vertical-offset="1054">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#925#926#0" expanded="true" />
-            <element signature="e#1026#1538#0" expanded="true" />
-            <element signature="e#1241#1473#0" expanded="true" />
-            <element signature="e#1450#1451#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="e#1024#1599#0" expanded="true" />
+            <element signature="e#1239#1534#0" expanded="true" />
+            <element signature="e#1511#1512#0" expanded="true" />
+            <element signature="e#1584#1585#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/javax/swing/JFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/StartingRoom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="561" column="0" selection-start="20374" selection-end="20374" vertical-scroll-proportion="0.0" vertical-offset="9537" max-vertical-offset="16082">
+        <state line="9" column="0" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="289">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/javax/swing/SwingUtilities.java">
+    <entry file="file://$PROJECT_DIR$/src/RoomContainer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1348" column="0" selection-start="54028" selection-end="54028" vertical-scroll-proportion="0.0" vertical-offset="22916" max-vertical-offset="35615">
+        <state line="29" column="0" selection-start="763" selection-end="763" vertical-scroll-proportion="0.0" vertical-offset="493" max-vertical-offset="680">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/java/awt/Container.java">
+    <entry file="file://$PROJECT_DIR$/src/Actor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1079" column="0" selection-start="42704" selection-end="42704" vertical-scroll-proportion="0.0" vertical-offset="18343" max-vertical-offset="83470">
+        <state line="13" column="0" selection-start="204" selection-end="204" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="442">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/BlankActor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="16" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0" vertical-offset="136" max-vertical-offset="289">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Room.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="48" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0" vertical-offset="255" max-vertical-offset="493">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="21" column="28" selection-start="594" selection-end="594" vertical-scroll-proportion="0.0" vertical-offset="357" max-vertical-offset="833">
+          <folding>
+            <element signature="e#1024#1599#0" expanded="true" />
+            <element signature="e#1239#1534#0" expanded="true" />
+            <element signature="e#1511#1512#0" expanded="true" />
+            <element signature="e#1584#1585#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -622,17 +667,16 @@
     <entry file="file://$PROJECT_DIR$/src/Actor.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="14" column="0" selection-start="209" selection-end="209" vertical-scroll-proportion="0.0" vertical-offset="238" max-vertical-offset="391">
-          <folding />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Room.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="12" column="13" selection-start="214" selection-end="214" vertical-scroll-proportion="0.0" vertical-offset="204" max-vertical-offset="323">
-          <folding>
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -640,13 +684,10 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="13" column="14" selection-start="261" selection-end="261" vertical-scroll-proportion="0.0" vertical-offset="221" max-vertical-offset="391">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#925#926#0" expanded="true" />
-            <element signature="e#1026#1538#0" expanded="true" />
-            <element signature="e#1241#1473#0" expanded="true" />
-            <element signature="e#1450#1451#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="e#1024#1599#0" expanded="true" />
+            <element signature="e#1239#1534#0" expanded="true" />
+            <element signature="e#1511#1512#0" expanded="true" />
+            <element signature="e#1584#1585#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -655,41 +696,48 @@
       <provider selected="true" editor-type-id="text-editor">
         <state line="6" column="18" selection-start="107" selection-end="107" vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="255">
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#925#926#0" expanded="true" />
-            <element signature="e#1026#1538#0" expanded="true" />
-            <element signature="e#1241#1473#0" expanded="true" />
-            <element signature="e#1450#1451#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
+            <element signature="e#1024#1599#0" expanded="true" />
+            <element signature="e#1239#1534#0" expanded="true" />
+            <element signature="e#1511#1512#0" expanded="true" />
+            <element signature="e#1584#1585#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/javax/swing/SwingUtilities.java">
+    <entry file="jar://C:/Program Files (x86)/Java/jdk1.7.0_51/src.zip!/javax/swing/SwingUtilities.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1348" column="0" selection-start="54028" selection-end="54028" vertical-scroll-proportion="0.0" vertical-offset="22025" max-vertical-offset="34867">
+        <state line="1346" column="0" selection-start="54011" selection-end="54011" vertical-scroll-proportion="0.0" vertical-offset="21955" max-vertical-offset="34884">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/javax/swing/JFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/BlankActor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="561" column="0" selection-start="20374" selection-end="20374" vertical-scroll-proportion="0.0" vertical-offset="8753" max-vertical-offset="15402">
+        <state line="6" column="13" selection-start="102" selection-end="102" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.7.0_40/src.zip!/java/awt/Container.java">
+    <entry file="file://$PROJECT_DIR$/src/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="1079" column="0" selection-start="42704" selection-end="42704" vertical-scroll-proportion="0.0" vertical-offset="17083" max-vertical-offset="82008">
-          <folding />
+        <state line="35" column="0" selection-start="983" selection-end="983" vertical-scroll-proportion="0.0" vertical-offset="280" max-vertical-offset="969">
+          <folding>
+            <element signature="e#1024#1599#0" expanded="true" />
+            <element signature="e#1239#1534#0" expanded="true" />
+            <element signature="e#1511#1512#0" expanded="true" />
+            <element signature="e#1584#1585#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/StartingRoom.java">
+    <entry file="file://$PROJECT_DIR$/Sprites/test.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Room.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="174" selection-end="174" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+        <state line="11" column="18" selection-start="247" selection-end="247" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
           <folding />
         </state>
       </provider>
@@ -701,41 +749,25 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/BlankActor.java">
+    <entry file="file://$PROJECT_DIR$/src/Actor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="16" selection-start="169" selection-end="169" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="289">
+        <state line="27" column="26" selection-start="769" selection-end="769" vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="867">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/TestActor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="0" selection-start="186" selection-end="186" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="272">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Room.java">
+    <entry file="file://$PROJECT_DIR$/src/StartingRoom.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="48" selection-start="428" selection-end="428" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="493">
-          <folding>
-            <element signature="e#492#493#0" expanded="true" />
-            <element signature="e#521#522#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="46" column="30" selection-start="1506" selection-end="1506" vertical-scroll-proportion="0.0" vertical-offset="278" max-vertical-offset="1054">
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#889#890#0" expanded="true" />
-            <element signature="e#925#926#0" expanded="true" />
-            <element signature="e#1026#1538#0" expanded="true" />
-            <element signature="e#1241#1473#0" expanded="true" />
-            <element signature="e#1450#1451#0" expanded="true" />
-            <element signature="e#1523#1524#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Actor.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="13" column="5" selection-start="204" selection-end="204" vertical-scroll-proportion="0.35023773" vertical-offset="0" max-vertical-offset="631">
+        <state line="10" column="8" selection-start="183" selection-end="183" vertical-scroll-proportion="0.26604068" vertical-offset="0" max-vertical-offset="639">
           <folding />
         </state>
       </provider>

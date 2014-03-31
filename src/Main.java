@@ -11,8 +11,8 @@ import java.lang.reflect.InvocationTargetException;
  * Time: 1:22 PM
  */
 public class Main extends JFrame{
-    private static final int DESIRED_WIDTH = 1920;
-    private static final int DESIRED_HEIGHT = 1080;
+    public static final int DESIRED_WIDTH = 1920;
+    public static final int DESIRED_HEIGHT = 1080;
     private final RoomContainer roomContainer;
     public Main(){
         super("Test");
