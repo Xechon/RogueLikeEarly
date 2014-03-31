@@ -1,3 +1,4 @@
+import com.sun.imageio.plugins.common.ImageUtil;
 import sun.awt.image.ToolkitImage;
 
 import javax.imageio.ImageIO;

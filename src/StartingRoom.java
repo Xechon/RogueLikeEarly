@@ -7,7 +7,10 @@
 public class StartingRoom extends Room {
     public StartingRoom(){
         super();
-
-        setActor(0,0,new TestActor(0,0));
+        for (int i = 0; i < Room.ROWS; i++){
+            for (int j = 0; j < Room.COLUMNS; j++){
+                setActor(i,j,new TestActor(i,j));
+            }
+        }
     }
 }
