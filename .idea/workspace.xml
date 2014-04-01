@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9a196dcf-059a-4c18-a0e2-fa956bb3141f" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sprites/sprite1.png" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Sprites/sprite2.png" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="RogueLikeEarly.iws" />
@@ -434,7 +436,11 @@
       <created>1396314761461</created>
       <updated>1396314761461</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Some optimization, sample sprites, and lots of comments.">
+      <created>1396315659731</created>
+      <updated>1396315659731</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -486,7 +492,8 @@
     <MESSAGE value="Testing to make sure I can stull upload/changed main so that it redraws all the actors" />
     <MESSAGE value="Actors are now almost working, look at &quot;testactor&quot; to see how to set a sprite to an actor. Now you can just overide the act method to get it to do stuff. It's kind of getting there. yay." />
     <MESSAGE value="test&#10;" />
-    <option name="LAST_COMMIT_MESSAGE" value="test&#10;" />
+    <MESSAGE value="Some optimization, sample sprites, and lots of comments." />
+    <option name="LAST_COMMIT_MESSAGE" value="Some optimization, sample sprites, and lots of comments." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
