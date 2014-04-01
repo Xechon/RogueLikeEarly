@@ -15,6 +15,7 @@ public class RoomContainer extends JPanel {
     }
     @Override
     public void paintComponent(Graphics g){
+        super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         Actor[][] actors = room.getActors();
         for (int i = 0; i < actors.length; i++){
