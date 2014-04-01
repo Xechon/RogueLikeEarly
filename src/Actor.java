@@ -26,7 +26,9 @@ public abstract class Actor {
         g2.drawImage(sprite,x,y,null);
     }
     public void setSprite(BufferedImage spr){
-       Image spriteImage = spr.getScaledInstance(Main.DESIRED_WIDTH/Room.COLUMNS,Main.DESIRED_HEIGHT/Room.ROWS, Image.SCALE_SMOOTH);
+        //Doesn't look as nice, but I changed the image scaling to fast and it sped up a bunch. In addition, we will have lower resolution
+        //images for the actual project, so that should help with speed, and scale will look nice anyway.
+       Image spriteImage = spr.getScaledInstance(Main.DESIRED_WIDTH/Room.COLUMNS,Main.DESIRED_HEIGHT/Room.ROWS, Image.SCALE_FAST);
        sprite = spriteImage;
     }
     public void setSpriteByFilename(String filename){

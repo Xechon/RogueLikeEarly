@@ -7,11 +7,11 @@ public class TestActor extends Actor {
     public TestActor(int i, int j){
         super(i,j);
         first = false;
-        setSpriteByFilename("test.png");
+        setSpriteByFilename("sprite1.png");
     }
     @Override
     public void act(){
-        setSpriteByFilename((first)?"test.png":"test2.png");
+        setSpriteByFilename((first)?"sprite1.png":"sprite2.png");
         first = !first;
     }
 }
