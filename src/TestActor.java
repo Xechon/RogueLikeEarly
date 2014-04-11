@@ -4,14 +4,18 @@
  */
 public class TestActor extends Actor {
     private boolean first;
+    public String normal = "zombie_idle.png";
+    public String act = "zombie_lunge.png";
+
     public TestActor(int i, int j){
         super(i,j);
         first = false;
-        setSpriteByFilename("sprite1.png");
+        setSpriteByFilename(normal);
     }
     @Override
     public void act(){
-        setSpriteByFilename((first)?"sprite1.png":"sprite2.png");
+        super.act();
+        setSpriteByFilename((first) ? normal : act);
         first = !first;
     }
 }

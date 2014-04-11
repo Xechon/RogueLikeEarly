@@ -9,6 +9,7 @@ import java.awt.*;
  */
 public class RoomContainer extends JPanel {
     private Room room;
+    private Player player;
     public RoomContainer(Room r){
         super();
         room = r;
@@ -31,5 +32,18 @@ public class RoomContainer extends JPanel {
                 actors[i][j].act();
             }
         }
+    }
+    public Player getPlayer(){
+        if(player == null){
+            for(Actor[] a : room.getActors()){
+                for(Actor b : a){
+                    if(b instanceof Player){
+                        player = (Player) b;
+                        break;
+                    }
+                }
+            }
+        }
+        return player;
     }
 }

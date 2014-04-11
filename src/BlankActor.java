@@ -1,3 +1,5 @@
+import java.awt.*;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Dustin
@@ -7,5 +9,9 @@
 public class BlankActor extends Actor{
     public BlankActor(int i, int j){
         super(i,j);
+    }
+    @Override
+    public void draw(Graphics2D g2){
+
     }
 }

@@ -11,12 +11,10 @@ import java.lang.reflect.InvocationTargetException;
  * Time: 1:22 PM
  */
 
-//I noticed that there are a few tiles that are off the screen to the right, maybe you are accidentally generating too many? I can't find where if so.
-//Otherwise I think we should have arrays of actors act instead of going through each tile, although, that wouldn't do anything for this case.
-//I added sample sprites (not mine), and it becomes apparent that there is some odd glitch with the placement. Just run it to see.
 public class Main extends JFrame{
-    public static final int DESIRED_WIDTH = 1920;
-    public static final int DESIRED_HEIGHT = 1080;
+    static GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
+    public static final int DESIRED_WIDTH = gd.getDisplayMode().getWidth();
+    public static final int DESIRED_HEIGHT = gd.getDisplayMode().getHeight();
     private final RoomContainer roomContainer;
     public Main(){
         super("Test");
@@ -27,8 +25,8 @@ public class Main extends JFrame{
         //setUndecorated(true);
         setLayout(new BorderLayout());
 
-
         roomContainer = new RoomContainer(new StartingRoom());
+        new Controller(roomContainer);
 
         add(roomContainer,BorderLayout.CENTER);
     }
@@ -45,7 +43,7 @@ public class Main extends JFrame{
                     Timer t = new Timer(10, new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
-                            main.getRoomContainer().act();
+                            //main.getRoomContainer().act();
                             main.getRoomContainer().repaint();
                         }
                     });

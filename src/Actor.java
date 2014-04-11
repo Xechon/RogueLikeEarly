@@ -1,8 +1,6 @@
-import com.sun.imageio.plugins.common.ImageUtil;
-import sun.awt.image.ToolkitImage;
-
 import javax.imageio.ImageIO;
 import java.awt.*;
+import java.awt.geom.AffineTransform;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
@@ -17,6 +15,8 @@ public abstract class Actor {
     private Image sprite;
     private int x;
     private int y;
+    private double angle = 0;
+    private AffineTransform at = new AffineTransform();
     public Actor(int i, int j){
         y = i*Main.DESIRED_HEIGHT/Room.ROWS;
         x = j*Main.DESIRED_WIDTH/Room.COLUMNS;
@@ -26,8 +26,6 @@ public abstract class Actor {
         g2.drawImage(sprite,x,y,null);
     }
     public void setSprite(BufferedImage spr){
-        //Doesn't look as nice, but I changed the image scaling to fast and it sped up a bunch. In addition, we will have lower resolution
-        //images for the actual project, so that should help with speed, and scale will look nice anyway.
        Image spriteImage = spr.getScaledInstance(Main.DESIRED_WIDTH/Room.COLUMNS,Main.DESIRED_HEIGHT/Room.ROWS, Image.SCALE_FAST);
        sprite = spriteImage;
     }
@@ -43,6 +41,14 @@ public abstract class Actor {
 
     }
     public void act() {
+        at.rotate(angle, x + (Main.DESIRED_WIDTH/Room.COLUMNS)/2 , y + (Main.DESIRED_HEIGHT/Room.ROWS)/2);
+    }
+    public void setAngle(int x2, int y2){
+        int deltaY = y2 - y + (Main.DESIRED_HEIGHT/Room.ROWS)/2;
+        int deltaX = x2 - x + (Main.DESIRED_WIDTH/Room.COLUMNS)/2;
+        angle = Math.atan(deltaY/deltaX);
+    }
+    public void interact(){
 
     }
 }
