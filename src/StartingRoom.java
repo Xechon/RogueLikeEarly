@@ -7,11 +7,18 @@
 public class StartingRoom extends Room {
     public StartingRoom(){
         super();
-        int row = (Room.ROWS - 1)/2;
-        int column = (Room.COLUMNS - 1)/2;
+        int row = (Room.ROWS)/2;
+        int column = (Room.COLUMNS)/2;
         for (int i = 0; i < Room.ROWS; i++){
             for (int j = 0; j < Room.COLUMNS; j++){
-                setActor(i,j,new BlankActor(i,j));//Possible unnecessary redundancy in setActor
+                double rand = Math.random();
+                if(rand < .1){
+                    setActor(i,j,new Zombie(i,j));
+                }
+                else{
+                    setActor(i,j,new BlankActor(i,j));
+                }
+
             }
         }
         setActor(row,column,new Player(row,column));

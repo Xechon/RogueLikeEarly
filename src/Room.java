@@ -10,7 +10,7 @@ public abstract class Room {
     public static final int COLUMNS = 16;
     private Actor[][] actors;
     public Room(){
-        actors = new Actor[ROWS][COLUMNS];
+        actors = new Actor[ROWS][COLUMNS]; //ArrayList might be better to use here.
     }
     public void setActor(int i, int j, Actor actor){
         actors[i][j] = actor;

@@ -2,12 +2,12 @@
 /**
  * Created by Dustin on 3/31/14.
  */
-public class TestActor extends Actor {
+public class Zombie extends Actor {
     private boolean first;
     public String normal = "zombie_idle.png";
     public String act = "zombie_lunge.png";
 
-    public TestActor(int i, int j){
+    public Zombie(int i, int j){
         super(i,j);
         first = false;
         setSpriteByFilename(normal);
@@ -15,7 +15,8 @@ public class TestActor extends Actor {
     @Override
     public void act(){
         super.act();
-        setSpriteByFilename((first) ? normal : act);
-        first = !first;
+        //setSpriteByFilename((first) ? normal : act);
+        //first = !first;
+        setAngle(1,1);
     }
 }

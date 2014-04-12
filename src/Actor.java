@@ -46,9 +46,18 @@ public abstract class Actor {
     public void setAngle(int x2, int y2){
         int deltaY = y2 - y + (Main.DESIRED_HEIGHT/Room.ROWS)/2;
         int deltaX = x2 - x + (Main.DESIRED_WIDTH/Room.COLUMNS)/2;
-        angle = Math.atan(deltaY/deltaX);
+        if(deltaX != 0){
+            angle = Math.atan(deltaY/deltaX);
+        }
+        else{
+            angle = 0;
+        }
     }
     public void interact(){
 
+    }
+    public void move(int xSpeed, int ySpeed){
+        x += xSpeed;
+        y += ySpeed;
     }
 }

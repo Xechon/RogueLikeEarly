@@ -43,7 +43,7 @@ public class Main extends JFrame{
                     Timer t = new Timer(10, new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
-                            //main.getRoomContainer().act();
+                            main.getRoomContainer().act();
                             main.getRoomContainer().repaint();
                         }
                     });
