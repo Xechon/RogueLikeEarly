@@ -16,8 +16,14 @@ public class Player extends Actor {
         super.act();
         move(Controller.xMove, Controller.yMove);
     }
+
     public void shoot(){
         setSpriteByFilename((first) ? normal : act);
         first = !first;
+    }
+
+    @Override
+    public void getTarget(Actor[][] things){
+
     }
 }

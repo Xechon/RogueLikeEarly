@@ -15,8 +15,11 @@ public class Zombie extends Actor {
     @Override
     public void act(){
         super.act();
-        //setSpriteByFilename((first) ? normal : act);
-        //first = !first;
-        setAngle(1,1);
+
+        if(target != null){
+            //setAngle(target.x, target.y);
+            setSpriteByFilename((first) ? normal : act);
+            //first = !first;
+        }
     }
 }

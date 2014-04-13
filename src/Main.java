@@ -15,7 +15,7 @@ public class Main extends JFrame{
     static GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
     public static final int DESIRED_WIDTH = gd.getDisplayMode().getWidth();
     public static final int DESIRED_HEIGHT = gd.getDisplayMode().getHeight();
-    private final RoomContainer roomContainer;
+    private RoomContainer roomContainer;
     public Main(){
         super("Test");
         setSize(new Dimension(DESIRED_WIDTH,DESIRED_HEIGHT));

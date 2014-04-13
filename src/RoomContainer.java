@@ -29,6 +29,7 @@ public class RoomContainer extends JPanel {
         Actor[][] actors = room.getActors();
         for (int i = 0; i < actors.length; i++){
             for (int j = 0; j < actors[i].length; j++){
+                actors[i][j].getTarget(actors);
                 actors[i][j].act();
             }
         }
