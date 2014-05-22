@@ -1,3 +1,4 @@
+import java.awt.*;
 
 /**
  * Created by Dustin on 3/31/14.
@@ -12,14 +13,17 @@ public class Zombie extends Actor {
         first = false;
         setSpriteByFilename(normal);
     }
+
     @Override
     public void act(){
         super.act();
 
         if(target != null){
-            //setAngle(target.x, target.y);
+            setAngle(new Point(target.x, target.y));
             setSpriteByFilename((first) ? normal : act);
-            //first = !first;
+        }
+        else{
+            setSpriteByFilename(normal);
         }
     }
 }

@@ -13,24 +13,25 @@ public class RoomContainer extends JPanel {
     public RoomContainer(Room r){
         super();
         room = r;
+        r.setActList();
     }
     @Override
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
         Actor[][] actors = room.getActors();
-        for (int i = 0; i < actors.length; i++){
-            for (int j = 0; j < actors[i].length; j++){
-                actors[i][j].draw(g2);
+        for (Actor[] actor : actors) {
+            for (Actor anActor : actor) {
+                anActor.draw(g2);
             }
         }
     }
     public void act(){
         Actor[][] actors = room.getActors();
-        for (int i = 0; i < actors.length; i++){
-            for (int j = 0; j < actors[i].length; j++){
-                actors[i][j].getTarget(actors);
-                actors[i][j].act();
+        for (Actor[] actor : actors) {
+            for (Actor anActor : actor) {
+                anActor.getTarget(actors);
+                anActor.act();
             }
         }
     }

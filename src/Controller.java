@@ -4,17 +4,20 @@ import java.awt.event.*;
 /**
  * Created by Xechon on 4/10/14.
  */
-//Sometimes pauses or stops when switching directions.
 public class Controller {
+    //imports for simplicity's sake
     RoomContainer rc;
     Player player;
+
+    //vector stuff
     static int yMove = 0;
     static int xMove = 0;
     static final int speed = 5;
+
     public Controller(RoomContainer c){
         rc = c;
         player = rc.getPlayer();
-        InputMap im = rc.getInputMap(rc.WHEN_IN_FOCUSED_WINDOW);
+        InputMap im = rc.getInputMap(JPanel.WHEN_IN_FOCUSED_WINDOW);
         ActionMap am = rc.getActionMap();
         im.put(KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, 0, false), "space-pressed");
         im.put(KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, 0, true), "space-released");
@@ -94,28 +97,37 @@ public class Controller {
         class MouseControls extends MouseAdapter{
             @Override
             public void mousePressed(MouseEvent e){
-                if(e.getButton() == e.BUTTON1){
+                if(e.getButton() == MouseEvent.BUTTON1){
                     player.shoot();
                 }
-            }
-            public void mouseReleased(MouseEvent e){
-                player.shoot();
-            }
-        }
-        rc.addMouseListener(new MouseControls());
+                else if(e.getButton() == MouseEvent.BUTTON2){
 
-        class MouseTracking implements MouseMotionListener{
+                }
+            }
+
+            @Override
+            public void mouseReleased(MouseEvent e){
+                if(e.getButton() == MouseEvent.BUTTON1){
+                    player.shoot();
+                }
+                else if(e.getButton() == MouseEvent.BUTTON2){
+
+                }
+            }
 
             @Override
             public void mouseDragged(MouseEvent e) {
-                player.setAngle(e.getX(), e.getY());
+                player.setMouseLocation(e.getPoint());
             }
 
             @Override
             public void mouseMoved(MouseEvent e) {
-                player.setAngle(e.getX(), e.getY());
+                player.setMouseLocation(e.getPoint());
             }
         }
-        rc.addMouseMotionListener(new MouseTracking());
+
+        MouseControls mc = new MouseControls();
+        rc.addMouseListener(mc);
+        rc.addMouseMotionListener(mc);
     }
 }

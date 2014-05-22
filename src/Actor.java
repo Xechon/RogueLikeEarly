@@ -24,28 +24,24 @@ public abstract class Actor {
 
     public Rectangle hitbox;
     public Shape viewbox;
-    private boolean debug  = true;
 
     public Actor target;
 
     public Actor(int i, int j){
         y = i*imgHeight;
         x = j*imgWidth;
-        sprite = new BufferedImage(imgHeight,imgWidth, BufferedImage.TYPE_3BYTE_BGR);
+        sprite = new BufferedImage(imgWidth,imgHeight, BufferedImage.TYPE_3BYTE_BGR);
         hitbox = new Rectangle((int)(x + 1.5*Room.COLUMNS) ,(int)(y + 1.5*Room.ROWS),Main.DESIRED_WIDTH/(2*Room.COLUMNS),Main.DESIRED_HEIGHT/(2*Room.ROWS));
         viewbox = new Ellipse2D.Double(x - (250 + imgWidth/2),y - (250 + imgHeight/2),500,500);
     }
     public void draw(Graphics2D g2) {
-        g2.drawImage(sprite,x,y,null);
-        if(debug){
-            g2.draw(hitbox);
-            g2.draw(viewbox);
-        }
         g2.setTransform(at);
+        g2.drawImage(sprite,x,y,null);
+        g2.draw(hitbox);
+        g2.draw(viewbox);
     }
     public void setSprite(BufferedImage spr){
-       Image spriteImage = spr.getScaledInstance(imgWidth,imgHeight, Image.SCALE_FAST);
-       sprite = spriteImage;
+       sprite = spr.getScaledInstance(imgWidth,imgHeight, Image.SCALE_FAST);
     }
     public void setSpriteByFilename(String filename){
         BufferedImage temp = null;
@@ -59,17 +55,15 @@ public abstract class Actor {
     }
 
     public void act() {
-        at.rotate(angle, x + (imgWidth)/2 , y + (imgHeight)/2);
+        at.setToRotation(angle + Math.PI/2, x + (imgWidth)/2 , y + (imgHeight)/2);
         hitbox = new Rectangle((int)(x + 1.5*Room.COLUMNS) ,(int)(y + 1.5*Room.ROWS),Main.DESIRED_WIDTH/(2*Room.COLUMNS),Main.DESIRED_HEIGHT/(2*Room.ROWS));
         viewbox = new Ellipse2D.Double(x - (250 - imgWidth/2),y - (250 - imgHeight/2),500,500);
     }
 
-    public void setAngle(int x2, int y2){
-        int deltaY = y2 - (y + imgHeight/2);
-        int deltaX = x2 - (x + imgWidth/2);
-        if(deltaX != 0){
-            angle = Math.atan(deltaY/deltaX);
-        }
+    public void setAngle(Point p){
+        int deltaY = p.y - (y + imgHeight/2);
+        int deltaX = p.x - (x + imgWidth/2);
+        angle = Math.atan2(deltaY, deltaX);
     }
 
     public void interact(){
@@ -81,14 +75,16 @@ public abstract class Actor {
         y += ySpeed;
     }
 
+    //Move to AI
     public void getTarget(Actor[][] things){
         for(Actor[] a: things){
             for(Actor b: a){
                 if(b instanceof Player && viewbox.intersects(b.hitbox)){
                     target = b;
-                    break;
+                    return;
                 }
             }
         }
+        target = null;
     }
 }

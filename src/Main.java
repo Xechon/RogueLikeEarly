@@ -19,7 +19,7 @@ public class Main extends JFrame{
     public Main(){
         super("Test");
         setSize(new Dimension(DESIRED_WIDTH,DESIRED_HEIGHT));
-        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         setLocation(0,0);
         //setUndecorated(true);

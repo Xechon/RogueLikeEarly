@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 /**
  * Created with IntelliJ IDEA.
  * User: Dustin
@@ -9,11 +11,21 @@ public abstract class Room {
     public static final int ROWS = 9;
     public static final int COLUMNS = 16;
     private Actor[][] actors;
+    ArrayList<Actor> actList = new ArrayList<Actor>();
     public Room(){
-        actors = new Actor[ROWS][COLUMNS]; //ArrayList might be better to use here.
+        actors = new Actor[ROWS][COLUMNS];
     }
     public void setActor(int i, int j, Actor actor){
         actors[i][j] = actor;
+    }
+    public void setActList(){
+        for(Actor[] e: actors){
+            for(Actor f: e){
+                if(!(f instanceof BlankActor)){
+                    actList.add(f);
+                }
+            }
+        }
     }
     public Actor[][] getActors() {
         return actors;
