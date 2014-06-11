@@ -13,13 +13,13 @@ public class StartingRoom extends Room {
             for (int j = 0; j < Room.COLUMNS; j++){
                 double rand = Math.random();
                 if(rand < .05){
-                    setActor(i,j,new Zombie(i,j));
+                    setActor(i,j,new Zombie(i,j, this));
                 }
                 else{
-                    setActor(i,j,new BlankActor(i,j));
+                    setActor(i,j,new BlankActor(i,j, this));
                 }
             }
         }
-        setActor(row,column,new Player(row,column));
+        setActor(row,column,new Player(row,column, this));
     }
 }

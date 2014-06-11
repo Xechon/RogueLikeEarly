@@ -16,7 +16,7 @@ public class Controller {
 
     public Controller(RoomContainer c){
         rc = c;
-        player = rc.getPlayer();
+        player = rc.room.getPlayer();
         InputMap im = rc.getInputMap(JPanel.WHEN_IN_FOCUSED_WINDOW);
         ActionMap am = rc.getActionMap();
         im.put(KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, 0, false), "space-pressed");
@@ -97,11 +97,11 @@ public class Controller {
         class MouseControls extends MouseAdapter{
             @Override
             public void mousePressed(MouseEvent e){
-                if(e.getButton() == MouseEvent.BUTTON1){
+                if(!player.first && e.getButton() == MouseEvent.BUTTON1){
                     player.shoot();
                 }
                 else if(e.getButton() == MouseEvent.BUTTON2){
-
+                    player.stab();
                 }
             }
 
@@ -110,8 +110,8 @@ public class Controller {
                 if(e.getButton() == MouseEvent.BUTTON1){
                     player.shoot();
                 }
-                else if(e.getButton() == MouseEvent.BUTTON2){
-
+                else if(e.getButton() == MouseEvent.BUTTON3){
+                    player.stab();
                 }
             }
 

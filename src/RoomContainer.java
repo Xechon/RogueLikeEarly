@@ -8,13 +8,16 @@ import java.awt.*;
  * Time: 3:41 PM
  */
 public class RoomContainer extends JPanel {
-    private Room room;
+    public Room room;
     private Player player;
+    private HUD hud = new HUD();
+
     public RoomContainer(Room r){
         super();
         room = r;
         r.setActList();
     }
+
     @Override
     public void paintComponent(Graphics g){
         super.paintComponent(g);
@@ -25,7 +28,9 @@ public class RoomContainer extends JPanel {
                 anActor.draw(g2);
             }
         }
+        hud.draw(g2);
     }
+
     public void act(){
         Actor[][] actors = room.getActors();
         for (Actor[] actor : actors) {
@@ -34,18 +39,6 @@ public class RoomContainer extends JPanel {
                 anActor.act();
             }
         }
-    }
-    public Player getPlayer(){
-        if(player == null){
-            for(Actor[] a : room.getActors()){
-                for(Actor b : a){
-                    if(b instanceof Player){
-                        player = (Player) b;
-                        break;
-                    }
-                }
-            }
-        }
-        return player;
+        repaint();
     }
 }
