@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.*;
+import java.util.ConcurrentModificationException;
 
 /**
  * Created with IntelliJ IDEA.
@@ -9,35 +10,33 @@ import java.awt.*;
  */
 public class RoomContainer extends JPanel {
     public Room room;
-    private Player player;
-    private HUD hud = new HUD();
+    private HUD hud;
 
     public RoomContainer(Room r){
         super();
         room = r;
         r.setActList();
+        hud = new HUD(room.player);
     }
 
     @Override
     public void paintComponent(Graphics g){
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
-        Actor[][] actors = room.getActors();
-        for (Actor[] actor : actors) {
-            for (Actor anActor : actor) {
-                anActor.draw(g2);
-            }
+        for (Actor a: room.getActList()){
+            a.draw(g2);
         }
         hud.draw(g2);
     }
 
     public void act(){
-        Actor[][] actors = room.getActors();
-        for (Actor[] actor : actors) {
-            for (Actor anActor : actor) {
-                anActor.getTarget(actors);
-                anActor.act();
-            }
+        for (Actor a : room.getActList()) {
+            a.act();
+        }
+        for(int i = 0; i < room.removeList.size(); i++){
+            Actor a = room.removeList.get(i);
+            room.getActList().remove(a);
+            room.removeList.remove(a);
         }
         repaint();
     }

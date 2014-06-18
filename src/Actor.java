@@ -15,11 +15,15 @@ import java.io.IOException;
 public abstract class Actor {
     public Image sprite;
     public double x, y;
-    public int i, j;
-    private int imgWidth = Main.DESIRED_WIDTH/Room.COLUMNS;
-    private int imgHeight = Main.DESIRED_HEIGHT/Room.ROWS;
+    protected int tileWidth = Main.SCREEN_WIDTH/Room.COLUMNS;
+    protected int tileHeight = Main.SCREEN_HEIGHT/Room.ROWS;
+
+    int width, height;
+
+    int scale = 1;
 
     public int health = 3;
+    public double speed;
 
     public boolean acting;
 
@@ -28,24 +32,33 @@ public abstract class Actor {
     public double angle = 0;
     public AffineTransform at = new AffineTransform();
 
-    public Rectangle hitbox;
-    public Shape viewbox;
+    public Rectangle hitbox = new Rectangle();
+    public Shape viewbox = new Rectangle();
 
     public Actor target;
+
+    public Item[] inventory = new Item[10];
+    public Item heldItem;
+    public Item highlightedItem;
 
     public Actor(){
 
     }
 
-    public Actor(int i, int j, Room room){
-        this.i = i;
-        this.j = j;
-        y = i*imgHeight;
-        x = j*imgWidth;
+    public Actor(double x, double y, Room room){
+        this.x = x;
+        this.y = y;
         this.room = room;
-        sprite = new BufferedImage(imgWidth,imgHeight, BufferedImage.TYPE_3BYTE_BGR);
-        hitbox = new Rectangle((int)(x + 1.5*Room.COLUMNS) ,(int)(y + 1.5*Room.ROWS),Main.DESIRED_WIDTH/(2*Room.COLUMNS),Main.DESIRED_HEIGHT/(2*Room.ROWS));
-        viewbox = new Ellipse2D.Double(x - (250 + imgWidth/2),y - (250 + imgHeight/2),500,500);
+        setSpriteByFilename(getClass().getSimpleName());
+        viewbox = new Ellipse2D.Double(x - (250 + width/2),y - (250 + height/2),500,500);
+    }
+
+    public Actor(int i, int j, Room room){
+        y = i*tileHeight;
+        x = j*tileWidth;
+        this.room = room;
+        setSpriteByFilename(getClass().getSimpleName());
+        viewbox = new Ellipse2D.Double(x - (250 + width/2),y - (250 + height/2),500,500);
     }
 
     public void draw(Graphics2D g2) {
@@ -57,34 +70,53 @@ public abstract class Actor {
     }
 
     public void setSprite(BufferedImage spr){
-       sprite = spr.getScaledInstance(imgWidth,imgHeight, Image.SCALE_FAST);
+        sprite = spr.getScaledInstance(spr.getWidth()*scale, spr.getHeight()*scale, Image.SCALE_FAST);
+        if(width == 0) {
+            width = sprite.getWidth(null);
+            height = sprite.getHeight(null);
+            hitbox = new Rectangle((int)x, (int)y, width, height);
+        }
     }
 
     public void setSpriteByFilename(String filename){
-        BufferedImage temp = null;
+        BufferedImage temp;
         try{
-            temp = ImageIO.read(new File("Sprites/" +filename));
+            temp = ImageIO.read(new File("Sprites/" + filename + ".png"));
             setSprite(temp);
-            //System.out.println(temp instanceof BufferedImage);
         }catch (IOException e){
             e.printStackTrace();
         }
     }
 
     public void act() {
-        at.setToRotation(angle + Math.PI/2, x + (imgWidth)/2 , y + (imgHeight)/2);
-        hitbox = new Rectangle((int)(x + 1.5*Room.COLUMNS) ,(int)(y + 1.5*Room.ROWS),Main.DESIRED_WIDTH/(2*Room.COLUMNS),Main.DESIRED_HEIGHT/(2*Room.ROWS));
-        viewbox = new Ellipse2D.Double(x - (250 - imgWidth/2),y - (250 - imgHeight/2),500,500);
+        at.setToRotation(angle - Math.PI/2, x + (width)/2 , y + (height)/2);
+        hitbox.setLocation((int)x, (int)y);
+        viewbox = new Ellipse2D.Double(x - (250 - width/2),y - (250 - height/2),500,500);
+        if(heldItem != null) {
+            heldItem.moveTo(hitbox.getCenterX(), hitbox.getCenterY());
+            heldItem.setAngle(angle);
+            heldItem.move(1.5 * width);
+        }
     }
 
     public void setAngle(Point p){
-        double deltaY = p.y - (y + imgHeight/2);
-        double deltaX = p.x - (x + imgWidth/2);
+        double deltaY = p.y - (y + height/2);
+        double deltaX = p.x - (x + width/2);
         angle = Math.atan2(deltaY, deltaX);
     }
 
-    public void interact(){
+    public void setAngle(double angle){
+        this.angle = angle;
+    }
 
+    public void interact(){
+        if(heldItem != null) {
+            toss();
+        }
+        if(viewbox != null && highlightedItem != null && viewbox.intersects(highlightedItem.hitbox)){
+            //putInInventory(heldItem);
+            heldItem = highlightedItem;
+        }
     }
 
     public void move(double xSpeed, double ySpeed){
@@ -96,23 +128,58 @@ public abstract class Actor {
         move(speed*Math.cos(angle), speed*Math.sin(angle));
     }
 
-    //Move to AI
-    public void getTarget(Actor[][] things){
-        for(Actor[] a: things){
-            for(Actor b: a){
-                if(b instanceof Player && viewbox.intersects(b.hitbox)){
-                    target = b;
-                    return;
-                }
-            }
-        }
-        target = null;
-    }
-
     public void takeDamage(int amt){
         health -= amt;
         if(health <= 0){
-            room.getActors()[i][j] = new BlankActor(i,j,room);
+            room.queueRemove(this);
+        }
+    }
+
+    public boolean hitboxCollide(Actor other){
+        if (!(other instanceof BlankActor) && hitbox.intersects(other.hitbox)) {
+            return true;
+        }
+        return false;
+    }
+
+    public Actor getCollision() {
+        for (Actor a : room.actList) {
+            if (hitboxCollide(a)) {
+                return a;
+            }
+        }
+        return null;
+    }
+
+    public void putInInventory(Item item){
+        for(int i = 0; i < inventory.length; i++){
+            if(inventory[i] == null){
+                inventory[i] = item;
+                if(item == heldItem){
+                    heldItem = null;
+                }
+                return;
+            }
+        }
+        //GUI.notify("Not enough space.");
+    }
+
+    public void moveTo(double x, double y){
+        this.x = x;
+        this.y = y;
+    }
+
+    public void use(){
+        if(heldItem != null) {
+            heldItem.use();
+        }
+    }
+
+    public void toss(){
+        if(heldItem != null){
+            heldItem.speed += 100;
+            heldItem.toss();
+            heldItem = null;
         }
     }
 }

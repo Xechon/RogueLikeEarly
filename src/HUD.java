@@ -9,18 +9,28 @@ import java.io.IOException;
  * Created by Xechon on 6/11/2014.
  */
 public class HUD {
-    public BufferedImage display;
+    public BufferedImage heart;
+    public Actor user;
 
-    public HUD(){
-       try{
-           display = ImageIO.read(new File("Sprites/hud.png"));
-       }catch (IOException e){
-           e.printStackTrace();
-       }
+    public HUD(Actor user){
+        this.user = user;
+        try{
+            heart = ImageIO.read(new File("Sprites/heart.png"));
+        }catch (IOException e){
+            e.printStackTrace();
+        }
     }
 
     public void draw(Graphics2D g2){
         g2.setTransform(new AffineTransform());
-        g2.drawImage(display,0,0,Main.DESIRED_WIDTH, Main.DESIRED_HEIGHT, null);
+        for(int i = 0; i < user.health; i++) {
+            g2.drawImage(heart, 30*i, 0, 25, 25, null);
+        }
+
+        if(user.health <= 0){
+            g2.setColor(Color.BLACK);
+            g2.setFont(new Font("TimesRoman", Font.PLAIN, 72));
+            g2.drawString("Oof. Looks like that hurt.", (Main.SCREEN_WIDTH)/2, (Main.SCREEN_HEIGHT)/2);
+        }
     }
 }

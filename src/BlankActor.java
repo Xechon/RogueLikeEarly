@@ -8,8 +8,9 @@ import java.awt.*;
  */
 public class BlankActor extends Actor{
     public BlankActor(int i, int j, Room room){
-        super(i,j, room);
+        super();
     }
+
     @Override
     public void draw(Graphics2D g2){
 

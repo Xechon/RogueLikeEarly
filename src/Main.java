@@ -13,14 +13,14 @@ import java.lang.reflect.InvocationTargetException;
 
 public class Main extends JFrame{
     static GraphicsDevice gd = GraphicsEnvironment.getLocalGraphicsEnvironment().getDefaultScreenDevice();
-    public static final int DESIRED_WIDTH = gd.getDisplayMode().getWidth();
-    public static final int DESIRED_HEIGHT = gd.getDisplayMode().getHeight();
+    public static final int SCREEN_WIDTH = gd.getDisplayMode().getWidth();
+    public static final int SCREEN_HEIGHT = gd.getDisplayMode().getHeight();
 
-    private RoomContainer roomContainer;
+    RoomContainer roomContainer;
 
     public Main(){
         super("Test");
-        setSize(new Dimension(DESIRED_WIDTH,DESIRED_HEIGHT));
+        setSize(new Dimension(SCREEN_WIDTH,SCREEN_HEIGHT));
         setDefaultCloseOperation(WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
         setLocation(0,0);
@@ -33,10 +33,6 @@ public class Main extends JFrame{
         add(roomContainer,BorderLayout.CENTER);
     }
 
-    public RoomContainer getRoomContainer(){
-        return roomContainer;
-    }
-
     public static void main(String[] args){
         try {
             SwingUtilities.invokeAndWait(new Runnable() {
@@ -47,7 +43,7 @@ public class Main extends JFrame{
                     Timer t = new Timer(10, new ActionListener() {
                         @Override
                         public void actionPerformed(ActionEvent e) {
-                            main.getRoomContainer().act();
+                            main.roomContainer.act();
                         }
                     });
                     t.start();

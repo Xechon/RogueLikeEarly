@@ -6,12 +6,13 @@ import java.util.ArrayList;
  * Date: 3/30/14
  * Time: 3:59 PM
  */
-public abstract class Room {
 
+public abstract class Room {
     public static final int ROWS = 9;
     public static final int COLUMNS = 16;
     private Actor[][] actors;
     ArrayList<Actor> actList = new ArrayList<Actor>();
+    ArrayList<Actor> removeList = new ArrayList<Actor>();
     public Player player;
 
     public Room(){
@@ -20,6 +21,7 @@ public abstract class Room {
 
     public void setActor(int i, int j, Actor actor){
         actors[i][j] = actor;
+        player = getPlayer();
     }
 
     public void setActList(){
@@ -31,12 +33,13 @@ public abstract class Room {
             }
         }
     }
+
     public Actor[][] getActors() {
         return actors;
     }
+
     public ArrayList<Actor> getActList(){
         return actList;
-
     }
 
     public Player getPlayer(){
@@ -51,5 +54,9 @@ public abstract class Room {
             }
         }
         return player;
+    }
+
+    public void queueRemove(Actor a){
+        removeList.add(a);
     }
 }

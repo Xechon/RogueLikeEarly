@@ -1,5 +1,6 @@
 import javax.swing.*;
 import java.awt.event.*;
+import java.security.Key;
 
 /**
  * Created by Xechon on 4/10/14.
@@ -16,7 +17,7 @@ public class Controller {
 
     public Controller(RoomContainer c){
         rc = c;
-        player = rc.room.getPlayer();
+        player = rc.room.player;
         InputMap im = rc.getInputMap(JPanel.WHEN_IN_FOCUSED_WINDOW);
         ActionMap am = rc.getActionMap();
         im.put(KeyStroke.getKeyStroke(KeyEvent.VK_SPACE, 0, false), "space-pressed");
@@ -30,11 +31,23 @@ public class Controller {
         im.put(KeyStroke.getKeyStroke(KeyEvent.VK_S, 0, true), "s-released");
         im.put(KeyStroke.getKeyStroke(KeyEvent.VK_D, 0, false), "d-pressed");
         im.put(KeyStroke.getKeyStroke(KeyEvent.VK_D, 0, true), "d-released");
+        im.put(KeyStroke.getKeyStroke(KeyEvent.VK_Q, 0, false), "q-pressed");
+
+        im.put(KeyStroke.getKeyStroke(KeyEvent.VK_1, 0, false), "1-pressed");
+        im.put(KeyStroke.getKeyStroke(KeyEvent.VK_2, 0, false), "2-pressed");
+        im.put(KeyStroke.getKeyStroke(KeyEvent.VK_3, 0, false), "3-pressed");
+        im.put(KeyStroke.getKeyStroke(KeyEvent.VK_4, 0, false), "4-pressed");
+        im.put(KeyStroke.getKeyStroke(KeyEvent.VK_5, 0, false), "5-pressed");
+        im.put(KeyStroke.getKeyStroke(KeyEvent.VK_6, 0, false), "6-pressed");
+        im.put(KeyStroke.getKeyStroke(KeyEvent.VK_7, 0, false), "7-pressed");
+        im.put(KeyStroke.getKeyStroke(KeyEvent.VK_8, 0, false), "8-pressed");
+        im.put(KeyStroke.getKeyStroke(KeyEvent.VK_9, 0, false), "9-pressed");
+        im.put(KeyStroke.getKeyStroke(KeyEvent.VK_0, 0, false), "0-pressed");
 
         am.put("space-pressed", new AbstractAction() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                //player.interact();
+
             }
         });
 
@@ -94,24 +107,39 @@ public class Controller {
             }
         });
 
+        am.put("q-pressed", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                player.toss();
+            }
+        });
+
+        for(int i = 0; i < 9; i++) {
+            final int num = i;
+            am.put("i-pressed", new AbstractAction() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    player.selectInventorySlot(num);
+                }
+            });
+        }
+
         class MouseControls extends MouseAdapter{
             @Override
             public void mousePressed(MouseEvent e){
                 if(!player.first && e.getButton() == MouseEvent.BUTTON1){
-                    player.shoot();
+                    player.use();
                 }
-                else if(e.getButton() == MouseEvent.BUTTON2){
-                    player.stab();
+                else if(e.getButton() == MouseEvent.BUTTON3){
+                    player.highlightItem();
+                    player.interact();
                 }
             }
 
             @Override
             public void mouseReleased(MouseEvent e){
                 if(e.getButton() == MouseEvent.BUTTON1){
-                    player.shoot();
-                }
-                else if(e.getButton() == MouseEvent.BUTTON3){
-                    player.stab();
+                    player.use();
                 }
             }
 

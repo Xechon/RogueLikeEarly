@@ -12,8 +12,14 @@ public class StartingRoom extends Room {
         for (int i = 0; i < Room.ROWS; i++){
             for (int j = 0; j < Room.COLUMNS; j++){
                 double rand = Math.random();
-                if(rand < .05){
+                if(rand < .03){
                     setActor(i,j,new Zombie(i,j, this));
+                }
+                else if(rand < .05){
+                    setActor(i,j,new Knife(i,j,this));
+                }
+                else if(rand < .07){
+                    setActor(i,j,new Gun(i,j,this));
                 }
                 else{
                     setActor(i,j,new BlankActor(i,j, this));
