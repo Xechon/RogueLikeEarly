@@ -15,6 +15,6 @@ public class Gun extends Item {
     }
 
     public void use(){
-        room.getActList().add(new Bullet(this));
+        room.queueAdd(new Bullet(this));
     }
 }

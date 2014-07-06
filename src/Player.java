@@ -11,18 +11,18 @@ public class Player extends Actor {
     public String normal = "player";
     public String act = "sprite2";
 
-    private Point mouseLocation = new Point();
-
     public Player(int i, int j, Room room){
         super(i,j, room);
         setSpriteByFilename(normal);
         speed = 5;
+        putInInventory(new Gun(this));
     }
 
     @Override
-    public void act(){
-        super.act(); //recalculates hitbox, viewbox, and angle
-        setAngle(mouseLocation);
+    public void act(ArrayList<Entity> entities){
+        super.act(entities);
+        setMouseLocation(MouseInfo.getPointerInfo().getLocation());
+        setAngle(target);
         move(Controller.xMove, Controller.yMove);
         if(heldItem != null){
             heldItem.speed = speed;
@@ -39,12 +39,14 @@ public class Player extends Actor {
     }
 
     public void setMouseLocation(Point p){
-        mouseLocation = p;
+        target = p;
+        target.setLocation(target.getX() + room.camX, target.getY() + room.camY);
+        highlightItem();
     }
 
     public void highlightItem(){
-        for(Actor e: room.actList){
-            if(e instanceof Item && ((Item) e).hitbox.contains(mouseLocation)){
+        for(Entity e: room.actList){
+            if(e instanceof Item && ((Item) e).bounds.contains(target)){
                 highlightedItem = (Item)e;
                 return;
             }

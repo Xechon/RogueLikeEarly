@@ -15,7 +15,7 @@ public class HUD {
     public HUD(Actor user){
         this.user = user;
         try{
-            heart = ImageIO.read(new File("Sprites/heart.png"));
+            heart = ImageIO.read(new File("Sprite/HUD/heart.png"));
         }catch (IOException e){
             e.printStackTrace();
         }
@@ -30,7 +30,7 @@ public class HUD {
         if(user.health <= 0){
             g2.setColor(Color.BLACK);
             g2.setFont(new Font("TimesRoman", Font.PLAIN, 72));
-            g2.drawString("Oof. Looks like that hurt.", (Main.SCREEN_WIDTH)/2, (Main.SCREEN_HEIGHT)/2);
+            g2.drawString("Oof! That looked like it hurt.", (Main.SCREEN_WIDTH)/4, (Main.SCREEN_HEIGHT)/2);
         }
     }
 }

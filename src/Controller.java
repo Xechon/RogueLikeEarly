@@ -1,6 +1,5 @@
 import javax.swing.*;
 import java.awt.event.*;
-import java.security.Key;
 
 /**
  * Created by Xechon on 4/10/14.
@@ -43,6 +42,10 @@ public class Controller {
         im.put(KeyStroke.getKeyStroke(KeyEvent.VK_8, 0, false), "8-pressed");
         im.put(KeyStroke.getKeyStroke(KeyEvent.VK_9, 0, false), "9-pressed");
         im.put(KeyStroke.getKeyStroke(KeyEvent.VK_0, 0, false), "0-pressed");
+
+        im.put(KeyStroke.getKeyStroke(KeyEvent.VK_F12, 0, false), "F12-pressed");
+
+        im.put(KeyStroke.getKeyStroke(KeyEvent.VK_ESCAPE, 0, false), "escape-pressed");
 
         am.put("space-pressed", new AbstractAction() {
             @Override
@@ -124,22 +127,44 @@ public class Controller {
             });
         }
 
+        am.put("escape-pressed", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Main.end();
+            }
+        });
+
+        am.put("F12-pressed", new AbstractAction() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                Room.debug = !Room.debug;
+            }
+        });
+
         class MouseControls extends MouseAdapter{
             @Override
             public void mousePressed(MouseEvent e){
                 if(!player.first && e.getButton() == MouseEvent.BUTTON1){
-                    player.use();
+                    leftClick(true);
                 }
                 else if(e.getButton() == MouseEvent.BUTTON3){
-                    player.highlightItem();
-                    player.interact();
+                    rightClick(true);
+                }
+                else if(e.getButton() == MouseEvent.BUTTON2){
+                    middleClick(true);
                 }
             }
 
             @Override
             public void mouseReleased(MouseEvent e){
                 if(e.getButton() == MouseEvent.BUTTON1){
-                    player.use();
+                    leftClick(false);
+                }
+                else if(e.getButton() == MouseEvent.BUTTON3){
+                    rightClick(false);
+                }
+                else if(e.getButton() == MouseEvent.BUTTON2){
+                    middleClick(false);
                 }
             }
 
@@ -152,10 +177,56 @@ public class Controller {
             public void mouseMoved(MouseEvent e) {
                 player.setMouseLocation(e.getPoint());
             }
+
+            @Override
+            public void mouseWheelMoved(MouseWheelEvent e){
+                int a = e.getWheelRotation();
+                if(a < 0){
+                    scrollUp(Math.abs(a));
+                }
+                else if(a > 0){
+                    scrollDown(a);
+                }
+            }
         }
 
         MouseControls mc = new MouseControls();
         rc.addMouseListener(mc);
         rc.addMouseMotionListener(mc);
+    }
+    public boolean leftClick,rightClick, middleClick;
+
+    public void leftClick(boolean b){
+        if(b && !leftClick) {
+            player.use();
+            leftClick = true;
+        }
+        else{
+            player.use();
+            leftClick = false;
+        }
+    }
+
+    public void rightClick(boolean b){
+        if(b && !rightClick) {
+            player.interact();
+            rightClick = true;
+        }
+        else{
+            //player.interact();
+            rightClick = false;
+        }
+    }
+
+    public void middleClick(boolean b){
+
+    }
+
+    public void scrollUp(int a){
+
+    }
+
+    public void scrollDown(int a){
+
     }
 }

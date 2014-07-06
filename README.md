@@ -1,5 +1,10 @@
 RogueLikeEarly
 ==============
 
-This is a small-scale test project, to get familiar with the process of creating a game and working in a team. It is an 
-overhead view, Hotline Miami inspired, school themed zombie game.
+CONTROLS:
+WASD movement
+Mouse to aim
+Left click to shoot or stab with appropriate items
+Right click to pickup items
+Q to toss items
+F12 to toggle debug info

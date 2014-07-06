@@ -1,32 +1,39 @@
+import java.util.ArrayList;
+
 /**
  * Created by Xechon on 6/9/2014.
  */
 public class Bullet extends Item{
-    double speed = 20;
+    double speed = 50;
 
-    public Bullet(Actor user){
+    public Bullet(Entity user){
         super(user);
-        move(user.hitbox.getWidth()*1.5);
+        setAngle(user.getAngle());
+        move(user.bounds.getWidth()*1.5);
+        target = user.target;
     }
 
     @Override
-    public void act(){
+    public void act(ArrayList<Entity> entities){
+        super.act(entities);
         move(speed);
-        hitbox.setLocation((int)x,(int)y);
-        at.setToRotation(angle - Math.PI/2, hitbox.getCenterX(), hitbox.getCenterY());
+        getRotation().setToRotation(getAngle() - Math.PI/2, user.bounds.getCenterX(), user.bounds.getCenterY());
 
-
-        for(Actor a: room.actList){
-            if (!(a instanceof BlankActor) && a != this && hitbox.intersects(a.hitbox)) {
-                a.takeDamage(1);
+        for(Entity a: room.getActList()){
+            if (a instanceof Actor && bounds.intersects(a.bounds)) {
+                Actor temp = (Actor) a;
+                temp.takeDamage(1);
                 room.queueRemove(this);
             }
         }
 
-        //Actor collider = getCollision();
+        //Sprite collider = getCollision();
         //if(collider != null) {
-        //    collider.takeDamage(1);
-            //room.queueRemove(this);
+        //    if(collider instanceof Actor) {
+        //        Actor temp = (Actor) collider;
+        //        temp.takeDamage(1);
+        //    }
+        //    room.queueRemove(this);
         //}
     }
 }
